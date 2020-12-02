@@ -31,17 +31,4 @@ const validatePasswords = (list) => {
   return validPasswords.length
 }
 
-const validatePasswords = (list) => {
-  const validPasswords = list.filter(list => {
-    const split = list.split(' ')
-    const rule = split[0]
-    const targetLetter = split[1].split('')[0]
-    const password = split[2].split('')
-    if (isValidPassword(rule, targetLetter, password)) {
-      return list
-    }
-  })
-  return validPasswords.length
-}
-
 console.log(validatePasswords(passwords))
